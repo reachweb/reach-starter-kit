@@ -1,0 +1,8 @@
+title: 'Contact Form'
+honeypot: name
+email:
+  -
+    to: email@here.com
+    reply_to: '{{email}}'
+    subject: 'New message from your website'
+    html: emails/email

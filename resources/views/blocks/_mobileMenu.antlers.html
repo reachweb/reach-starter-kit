@@ -1,0 +1,9 @@
+{{ nav:main as="menu" }}
+<mobile-menu 
+    :menu='{{ menu | vue }}'
+    :config='{{ siteconfig | to_json }}'
+    :locales='{{ r:locales }}'
+    v-if="! this.$store.getters['isLarge']"
+>
+</mobile-menu>
+{{ /nav:main }}

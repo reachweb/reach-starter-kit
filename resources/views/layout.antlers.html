@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>{{ seo_title ?? title }} | {{ siteconfig:site_name }}</title>
+        {{ partial:blocks/seo }}
+        <link rel="stylesheet" href="https://use.typekit.net/pua7sct.css">
+        <link rel="stylesheet" href="{{ mix src='css/site.css' }}">
+    </head>
+    <body class="">
+        {{ partial:blocks/translations }}
+        <div id="app" class="main-container">
+            <div class="pusher">
+            {{ partial:blocks/header }}
+            {{ partial:blocks/menu }}
+            {{ template_content }}        
+            </div>
+            {{ partial:blocks/mobileMenu }}
+            {{ partial:blocks/footer }}
+        </div>        
+        {{ yield:scripts }}
+        <script src="{{ mix src='/js/site.js' }}"></script>
+    </body>
+</html>

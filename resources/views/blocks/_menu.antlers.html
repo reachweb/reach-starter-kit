@@ -1,0 +1,7 @@
+<div class="hidden lg:flex justify-center items-center space-x-12 py-3 border-b border-or-gray-light">
+{{ nav:main }}
+    <div>
+        <a class="uppercase tracking-wide {{ if is_current || is_parent }}font-bold{{ /if }}" href="{{ url }}">{{ title }}</a>
+    </div>
+{{ /nav:main }}
+</div>

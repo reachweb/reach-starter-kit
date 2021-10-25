@@ -1,0 +1,376 @@
+.p-component, .p-component * {
+    box-sizing: border-box;
+}
+
+.p-hidden {
+    display: none;
+}
+
+.p-hidden-space {
+    visibility: hidden;
+}
+
+.p-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.p-hidden-accessible input,
+.p-hidden-accessible select {
+    transform: scale(0);
+}
+
+.p-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none;
+}
+
+.p-disabled, .p-disabled * {
+    cursor: default !important;
+    pointer-events: none;
+    user-select: none;
+}
+
+.p-component-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.p-overflow-hidden {
+    overflow: hidden;
+}
+
+.p-unselectable-text {
+    user-select: none;
+}
+
+.p-scrollbar-measure {
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+    position: absolute;
+    top: -9999px;
+}
+
+@-webkit-keyframes p-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes p-fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button,
+button {
+    border-radius: 0;
+}
+
+.p-link {
+	text-align: left;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	border: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Non vue overlay animations */
+.p-connected-overlay {
+    opacity: 0;
+    transform: scaleY(0.8);
+    transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.p-connected-overlay-visible {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.p-connected-overlay-hidden {
+    opacity: 0;
+    transform: scaleY(1);
+    transition: opacity .1s linear;
+}
+
+/* Vue based overlay animations */
+.p-connected-overlay-enter-from {
+    opacity: 0;
+    transform: scaleY(0.8);
+}
+
+.p-connected-overlay-leave-to {
+    opacity: 0;
+}
+
+.p-connected-overlay-enter-active {
+    transition: transform .12s cubic-bezier(0, 0, 0.2, 1), opacity .12s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.p-connected-overlay-leave-active {
+    transition: opacity .1s linear;
+}
+
+.p-checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: bottom;
+}
+
+.p-checkbox-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p-inputtext {
+    margin: 0;
+}
+
+.p-fluid .p-inputtext {
+    width: 100%;
+}
+
+
+.p-ripple {
+    overflow: hidden;
+    position: relative;
+}
+
+.p-ink {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    transform: scale(0);
+}
+  
+.p-ink-active {
+    animation: ripple 0.4s linear;
+}
+
+.p-ripple-disabled .p-ink {
+    display: none !important;
+}
+  
+@keyframes ripple {  
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+.item-filters {
+    .p-dropdown {
+        min-width: 12rem !important;
+    }
+    .p-dropdown .p-dropdown-label {
+        @apply text-base;
+    }
+}
+.p-dropdown {
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  }
+  .p-dropdown:not(.p-disabled):hover {
+    border-color: #2196F3;
+  }
+  .p-dropdown:not(.p-disabled).p-focus {
+    outline: 0 none;
+    outline-offset: 0;
+  }
+  .p-dropdown.p-dropdown-clearable .p-dropdown-label {
+    padding-right: 1.5rem;
+  }
+  .p-dropdown .p-dropdown-label {
+    background: transparent;
+    border: 0 none;
+    @apply text-base;
+    display: flex;
+    align-items: center;
+  }
+  .p-dropdown .p-dropdown-label.p-placeholder {
+    color: #6c757d;
+  }
+  .p-dropdown .p-dropdown-label:enabled:focus {
+    outline: 0 none;
+    box-shadow: none;
+  }
+  .p-dropdown .p-dropdown-trigger {
+    background: transparent;
+    color: #6c757d;
+  }
+  .p-dropdown .p-dropdown-clear-icon {
+    @apply absolute top-1/2 mt-1 transform -translate-y-1/2 -right-12 flex items-center justify-center bg-kos-yellow ml-4 text-xl w-8 h-8 shadow-blue leading-none font-bold ;
+  }
+  .p-dropdown.p-invalid.p-component {
+    border-color: #f44336;
+  }
+  
+  .p-dropdown-panel {
+    background: #ffffff;
+    color: #495057;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  .p-dropdown-panel .p-dropdown-header {
+    padding: 0.5rem 1rem;
+    border-bottom: 0 none;
+    color: #495057;
+    background: #f8f9fa;
+    margin: 0;
+  }
+  .p-dropdown-panel .p-dropdown-header .p-dropdown-filter {
+    padding: 0.25rem 0.75rem;
+  }
+  .p-dropdown-panel .p-dropdown-header .p-dropdown-filter-icon {
+    right: 0.5rem;
+    color: #6c757d;
+  }
+  .p-dropdown-panel .p-dropdown-items {
+    padding: 0.5rem 0;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border: 0 none;
+    color: #495057;
+    background: transparent;
+    transition: box-shadow 0.2s;
+    border-radius: 0;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: #495057;
+    background: #E3F2FD;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled):hover {
+    color: #495057;
+    background: #e9ecef;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item-group {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    color: #495057;
+    background: #ffffff;
+    font-weight: 600;
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-empty-message {
+    padding: 0.5rem 1rem;
+    color: #495057;
+    background: transparent;
+  }
+  
+  .p-input-filled .p-dropdown {
+    background: #f8f9fa;
+  }
+  .p-input-filled .p-dropdown:not(.p-disabled):hover {
+    background-color: #f8f9fa;
+  }
+  .p-input-filled .p-dropdown:not(.p-disabled).p-focus {
+    background-color: #ffffff;
+  }
+
+  .p-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  .p-checkbox .p-checkbox-box {
+    border: 2px solid #ced4da;
+    background: #ffffff;
+    width: 20px;
+    height: 20px;
+    color: #495057;
+    border-radius: 3px;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;    
+  }
+  .p-checkbox .p-checkbox-box .p-checkbox-icon {
+    transition-duration: 0.2s;
+    color: #ffffff;
+    font-size: 14px;
+  }
+  .p-checkbox .p-checkbox-box.p-highlight {
+    @apply bg-kos-blue border-kos-yellow;
+  }
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+    @apply border-indigo-700;
+  }
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+    outline: 0 none;
+    outline-offset: 0;
+    @apply border-indigo-700;
+  }
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+    @apply border-indigo-700;
+    @apply bg-indigo-700;
+    color: #ffffff;
+  }
+  .p-checkbox.p-invalid > .p-checkbox-box {
+    border-color: #f44336;
+  }
+
+  .p-paginator  {
+    @apply my-4 space-x-4 xl:space-x-8; 
+    .p-paginator-page {
+        @apply p-4 font-bold bg-kos-yellow shadow-blue outline-none;
+        transition: 0.25s background, 0.25s color;
+        &:not(:last-child) {
+            @apply mr-2 xl:mr-4;
+        }
+        &.p-highlight {
+            @apply text-white bg-kos-blue font-black;
+        }
+    }
+    .p-paginator-prev, .p-paginator-next {
+        @apply font-bold text-2xl text-black;
+    }
+    .p-disabled {
+        opacity: 0.5;
+    }
+    .p-paginator-first, .p-paginator-last {
+        display: none;
+    }
+  }
+
+
+.p-accordion-header-link {
+  outline: none;
+}
+
+/* Toggleable Content */
+.p-toggleable-content-enter-from,
+.p-toggleable-content-leave-to {
+    max-height: 0;
+}
+
+.p-toggleable-content-enter-to,
+.p-toggleable-content-leave-from {
+    max-height: 1000px;
+}
+
+.p-toggleable-content-leave-active {
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+}
+
+.p-toggleable-content-enter-active {
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}

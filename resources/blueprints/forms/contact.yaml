@@ -1,0 +1,114 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: first_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'First name'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: last_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Last name'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          validate:
+            - required
+      -
+        handle: email
+        field:
+          input_type: text
+          antlers: false
+          display: E-mail
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          validate:
+            - required
+            - email
+      -
+        handle: repeat_email
+        field:
+          input_type: text
+          antlers: false
+          display: 'Repeat e-mail'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          validate:
+            - required
+            - email
+            - 'same:email'
+      -
+        handle: telephone
+        field:
+          input_type: text
+          prepend: (optional)
+          antlers: false
+          display: Telephone
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+      -
+        handle: country
+        field:
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Country
+          type: select
+          icon: select
+          width: 50
+          listable: hidden
+          instructions_position: above
+      -
+        handle: message
+        field:
+          antlers: false
+          display: Message
+          type: textarea
+          icon: textarea
+          listable: hidden
+          validate:
+            - required
+      -
+        handle: privacy
+        field:
+          inline: true
+          options:
+            'yes': 'I consent for the processing of my personal data provided above by Orpheus Studios'
+          display: Privacy
+          type: checkboxes
+          icon: checkboxes
+          listable: hidden
+          validate:
+            - required
+          instructions_position: above
+      -
+        handle: name
+        field:
+          input_type: text
+          antlers: false
+          display: Name
+          type: text
+          icon: text
+          listable: hidden

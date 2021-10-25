@@ -1,0 +1,9 @@
+<div class="container my-8 xl:my-12">
+    <ul class="breadcrumbs flex items-center space-x-8 text-lg leading-none">
+        {{ nav:breadcrumbs }}
+        <li{{ if is_current }} class="font-bold"{{ /if }}>
+            <a href="{{ url }}">{{ title }}</a>
+        </li>
+        {{ /nav:breadcrumbs }}
+    </ul>
+</div>

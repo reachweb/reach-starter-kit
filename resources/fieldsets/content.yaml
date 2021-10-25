@@ -1,0 +1,141 @@
+title: Content
+fields:
+  -
+    handle: content
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      display: Content
+      type: bard
+      icon: bard
+      localizable: true
+      listable: hidden
+      container: assets
+      sets:
+        intro_text:
+          display: 'Intro text'
+          fields:
+            -
+              handle: content
+              field:
+                always_show_set_button: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                display: Content
+                type: bard
+                icon: bard
+                listable: hidden
+        text_with_images:
+          display: 'Text with images'
+          fields:
+            -
+              handle: content
+              field:
+                always_show_set_button: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                display: Content
+                type: bard
+                icon: bard
+                listable: hidden
+            -
+              handle: assets
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Assets
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: image_position
+              field:
+                options:
+                  left: Left
+                  right: Right
+                inline: true
+                cast_booleans: false
+                display: 'Image position'
+                type: radio
+                icon: radio
+                listable: hidden
+        image_gallery:
+          display: 'Image gallery'
+          fields:
+            -
+              handle: images
+              field:
+                mode: list
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Images
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+      instructions_position: above

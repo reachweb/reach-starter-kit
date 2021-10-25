@@ -1,0 +1,65 @@
+<div class="bg-or-blue xl:pb-32 relative mt-20 lg:mt-28 xl:mt-48">
+    <div class="container relative flex flex-wrap mx-auto  pt-40 px-4 xl:px-8 justify-between space-y-8 md:space-y-16 lg:space-y-0">
+        <div class="w-full md:w-1/2 lg:w-1/3 text-white">
+            <a class="block mb-8" href="{{ site:url }}">
+                <img style="max-width: 120px" src="{{ siteconfig:footer_logo }}" alt="{{ siteconfig:site_name }}">
+            </a>
+            <div class="font-light text-lg space-y-8">
+                <div>
+                    <div class="text-xl uppercase text-gray-300 mb-4">{{ "Address" | trans }}</div>
+                    <div class="text-lg">
+                        {{ siteconfig:full_address }}
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center">
+                        <span class="text-xl uppercase text-gray-300 mr-2">T</span> <a href="tel:{{ siteconfig:telephone }}">{{ siteconfig:telephone }}</a>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-xl uppercase text-gray-300 mr-2">E</span> <a href="mailto:{{ siteconfig:email }}">{{ siteconfig:email }}</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col xl:flex-row space-y-2 xl:space-y-0 xl:space-x-8 xl:items-center">
+                        <a class="flex items-center space-x-4" href="{{ siteconfig:facebook }}">
+                            <span class="icon-facebook text-xl"></span>
+                            <span class="text-lg">Facebook</span>
+                        </a> 
+                        <a class="flex items-center space-x-4" href="{{ siteconfig:instagram }}">
+                            <span class="icon-instagram text-xl"></span>
+                            <span class="text-lg">Instagram</span>
+                        </a> 
+                        <a class="flex items-center space-x-4" href="{{ siteconfig:tripadvisor }}">
+                            <span class="icon-tripadvisor text-xl"></span>
+                            <span class="text-lg">Tripadvisor</span>
+                        </a>                    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 text-white font-light">
+            <div class="uppercase text-xl">
+                {{ "Menu" | trans }}
+            </div>
+            <div class="mt-4 md:mt-12 text-lg">
+                {{ partial:blocks/footerMenu }}
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 text-white font-light">
+            <newsletter></newsletter>            
+        </div>
+    </div>
+    <div class="mt-8 mb-6 mx-4 xl:mx-0 xl:mt-0 xl:mb-0 lg:absolute lg:right-12 lg:bottom-8 z-10">
+        <div data-scroll="#app" class="scroll-to pt-0 lg:pt-8 xl:pt-0 flex justify-center xl:justify-start text-white xl:flex-col cursor-pointer">
+             <div class="mr-2 xl:mr-0 xl:mb-3 text-2xl"><i class="icon-arrow-up"></i></div>
+             <div class="text-lg font-light uppercase xl:vertical-writing">{{ "Back to top" | trans }}</div>
+        </div>
+    </div>
+    <div class="relative py-6 xl:py-0 xl:absolute xl:left-0 xl:right-0 xl:bottom-4 container mx-auto">
+        <div class="flex items-center justify-center text-sm text-white">
+            <div class="mr-2">Developed by</div>
+            <div><a href="https://reach.gr" title="Website design" class="block"><img src="/assets/logos/reach_small_white.png" alt="Reach web agency"></a></div>
+        </div>
+    </div>
+</div>

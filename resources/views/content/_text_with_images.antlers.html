@@ -1,0 +1,15 @@
+<div class="flex flex-col items-center xl:flex-row my-8">
+    <div class="w-full pb-6 xl:pb-0 xl:w-5/12 order-1 {{ if image_position == 'right' }}xl:order-3{{ /if }}">
+        {{ assets }}
+        <img src="{{ large }}" alt="" class="object-cover w-full h-full">
+        {{ /assets }}
+    </div>
+    <div class="hidden xl:flex justify-center md:w-1/12 order-2 relative">
+        {{ if image_position != 'right' }}
+        <div class="h-[380px] w-1 bg-or-pastel shadow-pastel"></div>
+        {{ /if }}
+    </div>
+    <div class="w-full xl:w-6/12 text-justify order-3 {{ if image_position == 'right' }}xl:order-1{{ /if }}">
+        {{ content }}
+    </div>                    
+</div>

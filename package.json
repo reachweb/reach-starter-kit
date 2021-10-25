@@ -1,0 +1,35 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "mix",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.2.5",
+        "cross-env": "^7.0",
+        "laravel-mix": "^6.0",
+        "postcss": "^8.2.9",
+        "postcss-import": "^14.0.1",
+        "postcss-nested": "^5.0.5",
+        "postcss-preset-env": "^6.7.0",
+        "tailwindcss": "^2.1.1",
+        "vue-loader": "^16.8.1",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "dayjs": "^1.10.7",
+        "gsap": "^3.6.1",
+        "lightgallery": "^2.2.1",
+        "primeicons": "^4.1.0",
+        "primevue": "^3.5.0",
+        "swiper": "^6.6.1",
+        "vanilla-lazyload": "^17.3.1",
+        "vue": "^3.2.0",
+        "vuex": "^4.0.0"
+    }
+}

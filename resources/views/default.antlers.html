@@ -1,0 +1,17 @@
+{{ partial:blocks/pageHeader }}
+
+<div class="container">
+    <div class="relative mt-60 mb-12 md:mt-32 md:mb-16 xl:my-24">
+        <div class="intro-text pt-12 xl:pt-16 3xl:pt-32">
+            {{ content }}
+                {{ if type == 'intro_text' }}
+                <div class="intro-text-title z-10">
+                    {{ content }}
+                </div>
+                {{ else }}
+                    {{ partial src="content/{type}" }}
+                {{ /if }}
+            {{ /content }}
+        </div>
+    </div>
+</div>

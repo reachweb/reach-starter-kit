@@ -1,0 +1,24 @@
+export_paths:
+  - app/Providers/AppServiceProvider.php
+  - app/Asset.php
+  - app/Tags/R.php
+  - app/Tags/Ts.php
+  - content
+  - config/statamic/assets.php
+  - config/statamic/cp.php
+  - config/statamic/editions.php
+  - config/statamic/sites.php
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/forms
+  - resources/css
+  - resources/js
+  - resources/views
+  - resources/lang/english.json
+  - resources/lang/greek.json
+  - public/assets
+  - public/css
+  - package.json
+  - tailwind.config.js
+  - webpack.mix.js
+  - jsconfig.json

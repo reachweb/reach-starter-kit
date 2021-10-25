@@ -1,0 +1,40 @@
+title: SEO
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      display: Title
+      type: text
+      icon: text
+      listable: hidden
+      localizable: true
+  -
+    handle: description
+    field:
+      display: Description
+      type: textarea
+      icon: textarea
+      listable: hidden
+      character_limit: '160'
+      antlers: false
+      localizable: true
+  -
+    handle: social_media_image
+    field:
+      mode: grid
+      container: assets
+      restrict: false
+      allow_uploads: true
+      display: 'Social media image'
+      type: assets
+      icon: assets
+      listable: hidden
+      max_files: 1
+  -
+    handle: no_index
+    field:
+      display: 'No index'
+      type: toggle
+      icon: toggle
+      listable: hidden

@@ -1,0 +1,38 @@
+<div id="header" class="py-6 lg:py-4 border-b border-or-gray-light">
+    <div class="container">
+        <div class="flex relative justify-between items-center">
+            <div class="w-6/12 lg:w-5/12 order-2 lg:order-1 flex justify-end lg:justify-start">
+                <div class="hidden lg:flex bg-white border border-or-blue shadow-blue">
+                    {{ locales current_first="true" }}
+                        <div class="px-4 py-2 {{ if is_current }} bg-or-blue text-white {{ /if }}">
+                            <a class="uppercase" href="{{ permalink }}">{{ locale:short }}</a>
+                        </div>
+                    {{ /locales }}
+                </div>
+                <div class="flex lg:hidden justify-end items-center">
+                    <div id="menu-button" class="menu-button shadow-pastel border border-white bg-or-pastel text-white flex items-center justify-between py-3 px-4 md:px-6" @click="this.$store.commit('toggleMenu')">
+                        <div class="mr-4 font-medium uppercase text-sm md:text-base">{{ "Menu" | trans }}</div>
+                        <div class="menu-sign">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="w-6/12 lg:w-2/12 order-1 lg:order-2 flex lg:justify-center relative">
+                <a class="logo-container block relative" href="{{ site:url }}">
+                    <img src="{{ siteconfig:site_logo }}" alt="{{ siteconfig:site_name }}" class="relative z-10">                    
+                </a>
+            </div>
+            <div class="w-5/12 order-3 lg:order-3 hidden lg:flex justify-end space-x-4">
+                <a class="relative flex button button-blue" href="/contact">
+                    {{ "Contact us" | trans }}
+                </a>
+                <a class="relative flex items-center justify-center button button-pastel" href="{{ siteconfig:webhotelier_url }}" target="_blank">
+                    {{ "Book now" | trans }}
+                </a>
+            </div>
+        </div>      
+    </div>
+</div>  
