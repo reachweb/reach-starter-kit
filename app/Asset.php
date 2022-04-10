@@ -11,7 +11,7 @@ class Asset extends \Statamic\Assets\Asset
         return (array_merge(parent::toAugmentedArray(), $this->getPresetImages()));
     }
 
-    protected function shallowAugmentedArrayKeys()
+    public function shallowAugmentedArrayKeys()
     {	
         return array_merge(parent::shallowAugmentedArrayKeys(), [
             'focus_css'
